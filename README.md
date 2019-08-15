@@ -1,8 +1,15 @@
 # Table of Contents
 
-* [Python Notes](#python-notes)
-* [Git Notes](#git-notes)
-* [Rapid Grep Notes](#rapid-grep-notes)
+* **[Python Notes](#python-notes)**
+  * [Timing Python](#timing-python)
+  * [Advanced formatting with f-strings](#advanced-formatting-with-f-strings)
+  * [Arrow vs. CISO8601](#arrow-vs-ciso8601)
+* **[Git Notes](#git-notes)**
+  * [Revert a committed change](#revert-a-committed-change)
+  * [Squashing commits (before pushing)](#squashing-commits-before-pushing)
+  * [Setting up git-lint](#setting-up-git-lint)
+* **[Rapid Grep Notes](#rapid-grep-notes)**
+  * [Exclude a directory from search](#exclude-a-directory-from-search)
 
 # Python Notes
 A cheat sheet for less-used Python tools and methods
@@ -68,7 +75,7 @@ Update the commit message as desired.
 $ git push --force
 ```
 
-## Starting with git-lint
+## Setting up git-lint
 
 1. Delete git-lit cache
 2. Remove the `REPO_HOME` line
