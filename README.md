@@ -8,6 +8,7 @@
   * [Revert a committed change](#revert-a-committed-change)
   * [Squashing commits (before pushing)](#squashing-commits-before-pushing)
   * [Setting up git-lint](#setting-up-git-lint)
+  * [Debugging .gitignore](#debugging-gitignore)
 * **[Rapid Grep Notes](#rapid-grep-notes)**
   * [Exclude a directory from search](#exclude-a-directory-from-search)
 
@@ -79,6 +80,9 @@ $ git push --force
 
 1. Delete git-lit cache
 2. Remove the `REPO_HOME` line
+
+## Debugging .gitignore
+https://blog.kennard.dev/2019-06-19-git-debug-gitignore/
 
 # Rapid Grep Notes
 
