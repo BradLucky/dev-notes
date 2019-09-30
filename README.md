@@ -12,6 +12,7 @@
   * [Debugging .gitignore](#debugging-gitignore)
 * **[Rapid Grep Notes](#rapid-grep-notes)**
   * [Exclude a directory from search](#exclude-a-directory-from-search)
+* **[Additional Resources](#additional-resources)**
 
 # Python Notes
 A cheat sheet for less-used Python tools and methods
@@ -111,3 +112,6 @@ https://blog.kennard.dev/2019-06-19-git-debug-gitignore/
 ```bash
 $ rg template -g '!frontend/*'
 ```
+
+# Additional Resources
+1. [Python Tips and Trick, You Haven't Already Seen](https://martinheinz.dev/blog/1)
