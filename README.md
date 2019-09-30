@@ -4,6 +4,7 @@
   * [Timing Python](#timing-python)
   * [Advanced formatting with f-strings](#advanced-formatting-with-f-strings)
   * [Arrow vs. CISO8601](#arrow-vs-ciso8601)
+  * [Creating an object that supports `with` statement](#creating-an-object-that-supports-with-statement)
 * **[Git Notes](#git-notes)**
   * [Revert a committed change](#revert-a-committed-change)
   * [Squashing commits (before pushing)](#squashing-commits-before-pushing)
@@ -55,6 +56,25 @@ f'{name.center(10, "*"):~<20}'
 For reference CISO8601 is considerably faster, but...
 ```python
 ciso8601.parse_datetime(<DateTime>) == arrow.get(<DateTime>).datetime
+```
+
+## Creating an object that supports `with` statement
+```python
+from contextlib import contextmanager
+
+@contextmanager
+def tag(name):
+    print(f'<{name}>')
+    yield
+    print(f'</{name}>')
+    
+with tag('title'):
+    print('This is the title')
+```
+```html
+<title>
+This is the title
+</title>
 ```
 
 # Git Notes
