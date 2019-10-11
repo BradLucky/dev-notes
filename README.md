@@ -7,6 +7,7 @@
   * [Creating an object that supports `with` statement](#creating-an-object-that-supports-with-statement)
 * **[Git Notes](#git-notes)**
   * [Revert a committed change](#revert-a-committed-change)
+  * [Overwrite local branch with remote branch](#overwrite-local-branch-with-remote-branch)
   * [Squashing commits (before pushing)](#squashing-commits-before-pushing)
   * [Setting up git-lint](#setting-up-git-lint)
   * [Debugging .gitignore](#debugging-gitignore)
@@ -86,6 +87,13 @@ Use this with caution. It will erase all history of commits after the hash you u
 $ git reset --hard <hash>
 ```
 
+## Overwrite local branch with remote branch
+Use this with caution, obviously.
+```bash
+# git reset --hard <remote_branch>
+$ git reset --hard origin/development
+```
+
 ## Squashing commits (before pushing)
 ```bash
 $ git rebase -i development  # branch name
@@ -99,7 +107,7 @@ $ git push --force
 
 ## Setting up git-lint
 
-1. Delete git-lit cache
+1. Delete git-lint cache
 2. Remove the `REPO_HOME` line
 
 ## Debugging .gitignore
