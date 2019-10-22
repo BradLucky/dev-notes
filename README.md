@@ -13,6 +13,9 @@
   * [Debugging .gitignore](#debugging-gitignore)
 * **[Rapid Grep Notes](#rapid-grep-notes)**
   * [Exclude a directory from search](#exclude-a-directory-from-search)
+* **[Mac](#mac)**
+  * [Install Xcode](#install-xcode)
+  * [Change Interactive Shell](#change-interactive-shell)
 * **[Additional Resources](#additional-resources)**
 
 # Python Notes
@@ -21,7 +24,6 @@ A cheat sheet for less-used Python tools and methods
 ## Timing Python
 ```python
 import timeit
-
 
 timeit.timeit("""
     name = 'Brad'
@@ -106,7 +108,6 @@ $ git push --force
 ```
 
 ## Setting up git-lint
-
 1. Delete git-lint cache
 2. Remove the `REPO_HOME` line
 
@@ -116,9 +117,29 @@ https://blog.kennard.dev/2019-06-19-git-debug-gitignore/
 # Rapid Grep Notes
 
 ## Exclude a directory from search
-
 ```bash
 $ rg template -g '!frontend/*'
+```
+
+# Mac
+
+## Install Xcode
+Every now and then (especially when upgrading MacOS), ugly errors will arise on the command line. For instance:
+```bash
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+```
+To solve this, (re)install Xcode:
+```bash
+$ xcode-select --install
+```
+
+## Change Interactive Shell
+The default since Catalina is zsh. To decide which you want:
+```bash
+$ chsh -s /bin/bash
+# ... or ...
+$ chsh -s /bin/zsh
+# more options can be found in /bin/
 ```
 
 # Additional Resources
