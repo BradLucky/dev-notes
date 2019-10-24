@@ -5,6 +5,7 @@
   * [Advanced formatting with f-strings](#advanced-formatting-with-f-strings)
   * [Arrow vs. CISO8601](#arrow-vs-ciso8601)
   * [Creating an object that supports `with` statement](#creating-an-object-that-supports-with-statement)
+  * [Autoreload with iPython](#autoreload-with-ipython)
 * **[Git Notes](#git-notes)**
   * [Revert a committed change](#revert-a-committed-change)
   * [Overwrite local branch with remote branch](#overwrite-local-branch-with-remote-branch)
@@ -80,6 +81,29 @@ with tag('title'):
 This is the title
 </title>
 ```
+
+## Autoreload with iPython
+```bash
+$ ipython
+```
+```python
+In [1]: %load_ext autoreload
+
+In [2]: %autoreload 1
+
+In [3]: %aimport my_package.directory.module
+
+In [4]: mine = module.MyClass()
+
+In [5]: mine.output()
+Out[5]: 0
+
+# ... open up my_package/directory/module.py and make a change ...
+
+In [6]: mine.output()
+Out[6]: 1
+```
+See this gist on [How to user autoreload](https://gist.github.com/jbwhit/38c1035c48cdb1714fc8d47fa163bfae) for more details.
 
 # Git Notes
 
