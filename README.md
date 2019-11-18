@@ -57,8 +57,8 @@ f'{name.center(10, "*"):~<20}'
 >>> '***Brad***~~~~~~~~~~'
 
 line_width = 24
-f'{name.center(10, " "):~^{line_width}}'  # use another set of curly braces
->>> '~~~~~~~   Brad   ~~~~~~~'
+f'{name.center(len(name) + 2, " "):~^{line_width}}'  # use another set of curly braces
+>>> '~~~~~~~~~ Brad ~~~~~~~~~'
 ```
 
 ## Arrow vs. CISO8601
