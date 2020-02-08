@@ -6,6 +6,7 @@
   * [Arrow vs. CISO8601](#arrow-vs-ciso8601)
   * [Creating an object that supports `with` statement](#creating-an-object-that-supports-with-statement)
   * [Autoreload with iPython](#autoreload-with-ipython)
+  * [Lambda Cheat Sheet](#lambda-cheat-sheet)
 * **[Git Notes](#git-notes)**
   * [Revert a committed change](#revert-a-committed-change)
   * [Overwrite local branch with remote branch](#overwrite-local-branch-with-remote-branch)
@@ -108,6 +109,41 @@ In [6]: mine.output()
 Out[6]: 1
 ```
 See this gist on [How to user autoreload](https://gist.github.com/jbwhit/38c1035c48cdb1714fc8d47fa163bfae) for more details.
+
+## Lambda Cheat Sheet
+Lambda functions do not require a `return` statement, but they are also anonymous, so you will usually want to assign them to a variable so you can refer to them later.
+
+In fact, `return`, `pass`, `assert`, and `raise` are not allowed in lambda definitions.
+
+```python
+# regular definition
+def add_one(x):
+    return x + 1
+
+add_one(4)
+>>> 5
+
+# lambda defintion
+add_one = lambda x: x + 1
+#                ^-- bound variable
+
+add_one(5)
+>>> 6
+```
+
+Using multiple arguments:
+
+```python
+full_name = lambda first, last: f'Full name: {first.title()} {last.title()}'
+
+full_name('brad', 'pitt')
+>>> 'Full name: Brad Pitt'
+```
+
+Example of an Immediately Invoked Function Expression (IIFE, pronounced "iffy"):
+```python
+(lambda x, y: x + y)(2, 3) = 5
+```
 
 # Git Notes
 
