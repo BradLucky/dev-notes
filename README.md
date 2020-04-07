@@ -91,6 +91,25 @@ This is the title
 ```bash
 $ ipython
 ```
+`%autoreload 2` is the easiest entry and will likely get you what you need because it reloads everything before executing the Python.
+```python
+In [1]: %load_ext autoreload
+
+In [2]: %autoreload 2
+
+In [3]: mine = module.MyClass()
+
+In [4]: mine.output()
+Out[5]: 0
+
+# ... open up my_package/directory/module.py and make a change ...
+
+In [5]: mine.output()
+Out[5]: 1
+
+```
+
+If you want to only reload specific modules, use `%autoreload 1`.
 ```python
 In [1]: %load_ext autoreload
 
@@ -108,7 +127,7 @@ Out[5]: 0
 In [6]: mine.output()
 Out[6]: 1
 ```
-See this gist on [How to user autoreload](https://gist.github.com/jbwhit/38c1035c48cdb1714fc8d47fa163bfae) for more details.
+See this gist on [How to use autoreload](https://gist.github.com/jbwhit/38c1035c48cdb1714fc8d47fa163bfae) for more details.
 
 ## Lambda Cheat Sheet
 Lambda functions do not require a `return` statement, but they are also anonymous, so you will usually want to assign them to a variable so you can refer to them later.
