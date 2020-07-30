@@ -1,26 +1,28 @@
 # Table of Contents
 
-* **[Python Notes](#python-notes)**
+* **[Python](#python)**
   * [Timing Python](#timing-python)
   * [Advanced formatting with f-strings](#advanced-formatting-with-f-strings)
   * [Arrow vs. CISO8601](#arrow-vs-ciso8601)
   * [Creating an object that supports `with` statement](#creating-an-object-that-supports-with-statement)
   * [Autoreload with iPython](#autoreload-with-ipython)
   * [Lambda Cheat Sheet](#lambda-cheat-sheet)
-* **[Git Notes](#git-notes)**
+* **[Git](#git)**
   * [Revert a committed change](#revert-a-committed-change)
   * [Overwrite local branch with remote branch](#overwrite-local-branch-with-remote-branch)
   * [Squashing commits (before pushing)](#squashing-commits-before-pushing)
   * [Setting up git-lint](#setting-up-git-lint)
   * [Debugging .gitignore](#debugging-gitignore)
-* **[Rapid Grep Notes](#rapid-grep-notes)**
+* **[Docker](#docker)**
+  * [Start Docker from the command line](#start-docker-from-the-command-line)
+* **[Rapid Grep](#rapid-grep)**
   * [Exclude a directory from search](#exclude-a-directory-from-search)
 * **[Mac](#mac)**
   * [Install Xcode](#install-xcode)
   * [Change Interactive Shell](#change-interactive-shell)
 * **[Additional Resources](#additional-resources)**
 
-# Python Notes
+# Python
 A cheat sheet for less-used Python tools and methods
 
 ## Timing Python
@@ -164,7 +166,7 @@ Example of an Immediately Invoked Function Expression (IIFE, pronounced "iffy"):
 (lambda x, y: x + y)(2, 3) = 5
 ```
 
-# Git Notes
+# Git
 
 ## Revert a committed change
 Use this with caution. It will erase all history of commits after the hash you use.
@@ -197,7 +199,14 @@ $ git push --force
 ## Debugging .gitignore
 https://blog.kennard.dev/2019-06-19-git-debug-gitignore/
 
-# Rapid Grep Notes
+# Docker
+
+## Start Docker from the command line
+```shell
+$ systemctl start docker
+```
+
+# Rapid Grep
 
 ## Exclude a directory from search
 ```bash
