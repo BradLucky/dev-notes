@@ -3,6 +3,7 @@
 * **[Python](#python)**
   * [Timing Python](#timing-python)
   * [Advanced formatting with f-strings](#advanced-formatting-with-f-strings)
+  * [classproperty](#classproperty)
   * [Arrow vs. CISO8601](#arrow-vs-ciso8601)
   * [Creating an object that supports `with` statement](#creating-an-object-that-supports-with-statement)
   * [Autoreload with iPython](#autoreload-with-ipython)
@@ -62,6 +63,25 @@ f'{name.center(10, "*"):~<20}'
 line_width = 24
 f'{name.center(len(name) + 2, " "):~^{line_width}}'  # use another set of curly braces
 >>> '~~~~~~~~~ Brad ~~~~~~~~~'
+```
+
+## classproperty
+In order to create a combined [`@classmethod`+`@property` a la Django](https://docs.djangoproject.com/en/3.1/_modules/django/utils/functional/#classproperty):
+```python
+class classproperty:
+    """
+    Decorator that converts a method with a single cls argument into a property
+    that can be accessed directly from the class.
+    """
+    def __init__(self, method=None):
+        self.fget = method
+
+    def __get__(self, instance, cls=None):
+        return self.fget(cls)
+
+    def getter(self, method):
+        self.fget = method
+        return self
 ```
 
 ## Arrow vs. CISO8601
