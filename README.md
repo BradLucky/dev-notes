@@ -8,6 +8,7 @@
   * [Creating an object that supports `with` statement](#creating-an-object-that-supports-with-statement)
   * [Autoreload with iPython](#autoreload-with-ipython)
   * [Lambda Cheat Sheet](#lambda-cheat-sheet)
+  * [Importance of using printf vs. f-strings when logging](#importance-of-using-printf-vs-f-strings-when-logging)
 * **[Git](#git)**
   * [Revert a committed change](#revert-a-committed-change)
   * [Overwrite local branch with remote branch](#overwrite-local-branch-with-remote-branch)
@@ -185,6 +186,11 @@ Example of an Immediately Invoked Function Expression (IIFE, pronounced "iffy"):
 ```python
 (lambda x, y: x + y)(2, 3) = 5
 ```
+
+## Importance of using printf vs. f-strings when logging
+1. [The logging library uses printf internally](https://docs.python.org/3/howto/logging-cookbook.html#formatting-styles)
+2. [Using f-strings forces the evaluation of variables regardless of needing them](https://docs.python.org/3/howto/logging.html#optimization)
+3. [Group logs in Sentry by message, not variable differences](https://blog.pilosus.org/posts/2020/01/24/python-f-strings-in-logging/)
 
 # Git
 
