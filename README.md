@@ -15,6 +15,7 @@
   * [Squashing commits (before pushing)](#squashing-commits-before-pushing)
   * [Setting up git-lint](#setting-up-git-lint)
   * [Debugging .gitignore](#debugging-gitignore)
+  * [Create an Empty Commit](#create-an-empty-commit)
 * **[Docker](#docker)**
   * [Start Docker from the command line](#start-docker-from-the-command-line)
 * **[Rapid Grep](#rapid-grep)**
@@ -196,25 +197,25 @@ Example of an Immediately Invoked Function Expression (IIFE, pronounced "iffy"):
 
 ## Revert a committed change
 Use this with caution. It will erase all history of commits after the hash you use.
-```bash
+```shell
 $ git reset --hard <hash>
 ```
 
 ## Overwrite local branch with remote branch
 Use this with caution, obviously.
-```bash
+```shell
 # git reset --hard <remote_branch>
 $ git reset --hard origin/development
 ```
 
 ## Squashing commits (before pushing)
-```bash
+```shell
 $ git rebase -i development  # branch name
 ```
 In the editor that comes up, change "most" lines to `squash` and save.
 
 Update the commit message as desired.
-```bash
+```shell
 $ git push --force
 ```
 
@@ -224,6 +225,12 @@ $ git push --force
 
 ## Debugging .gitignore
 https://blog.kennard.dev/2019-06-19-git-debug-gitignore/
+
+## Create an Empty Commit
+```shell
+git commit --allow-empty -m "Empty Commit"
+```
+* https://www.freecodecamp.org/news/how-to-push-an-empty-commit-with-git/
 
 # Docker
 
@@ -243,17 +250,17 @@ $ rg template -g '!frontend/*'
 
 ## Install Xcode
 Every now and then (especially when upgrading MacOS), ugly errors will arise on the command line. For instance:
-```bash
+```shell
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 ```
 To solve this, (re)install Xcode:
-```bash
+```shell
 $ xcode-select --install
 ```
 
 ## Change Interactive Shell
 The default since Catalina is zsh. To decide which you want:
-```bash
+```shell
 $ chsh -s /bin/bash
 # ... or ...
 $ chsh -s /bin/zsh
