@@ -270,3 +270,4 @@ $ chsh -s /bin/zsh
 # Additional Resources
 1. [Python Tips and Trick, You Haven't Already Seen](https://martinheinz.dev/blog/1)
 2. [PostgreSQL JSON cheatsheet](https://devhints.io/postgresql-json)
+3. [Different Shells in Github Actions](https://dev.to/pwd9000/github-actions-all-the-shells-581h)
