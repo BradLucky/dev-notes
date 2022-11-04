@@ -271,3 +271,4 @@ $ chsh -s /bin/zsh
 1. [Python Tips and Trick, You Haven't Already Seen](https://martinheinz.dev/blog/1)
 2. [PostgreSQL JSON cheatsheet](https://devhints.io/postgresql-json)
 3. [Different Shells in Github Actions](https://dev.to/pwd9000/github-actions-all-the-shells-581h)
+4. [Remove a merge commit from a branch](https://stackoverflow.com/a/46921732/1988486)
