@@ -18,6 +18,7 @@
   * [Create an Empty Commit](#create-an-empty-commit)
 * **[Docker](#docker)**
   * [Start Docker from the command line](#start-docker-from-the-command-line)
+* **[SOCKS v5 Proxy Tunnel](#socks-v5)**
 * **[Rapid Grep](#rapid-grep)**
   * [Exclude a directory from search](#exclude-a-directory-from-search)
 * **[Mac](#mac)**
@@ -238,6 +239,25 @@ git commit --allow-empty -m "Empty Commit"
 ```shell
 $ systemctl start docker
 ```
+
+# SOCKS v5
+In order to route a request through another server (and set DNS to appear as that other server while accessing a third party), use a SOCKS v5 tunnel.
+1. Create a SOCKS v5 proxy tunnel to a remote server
+   ```shell
+   ssh -4 -ND 1337 username@other-server
+   ```
+2. Confirm it's working from the command line
+   ```shell
+   curl --socks5-hostname localhost:1337 https://www.google.com
+   ```
+3. Confirm it's working from Python (needs `requests[socks]` installed)
+   ```shell
+   $ python -i
+   
+   import requests
+   proxies = {"http": "socks5h://localhost:1337", "https": "socks5h://localhost:1337"}
+   requests.get("https://www.google.com", proxies=proxies)
+   ```
 
 # Rapid Grep
 
