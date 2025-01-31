@@ -221,6 +221,8 @@ postgresql://other@localhost/otherdb?connect_timeout=10&application_name=myapp
 postgresql://localhost/mydb?user=other&password=secret
 ```
 
+Source: [https://stackoverflow.com/a/20722229/1988486](https://stackoverflow.com/a/20722229/1988486)
+
 # Git
 
 ## Revert a committed change
