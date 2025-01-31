@@ -10,6 +10,8 @@
   * [Lambda Cheat Sheet](#lambda-cheat-sheet)
   * [Importance of using printf vs. f-strings when logging](#importance-of-using-printf-vs-f-strings-when-logging)
   * [Atomic SQLA Testing](#atomic-sqla-testing)
+* **[PostgreSQL](#postgresql)**
+  * [URI Format](#uri-format)
 * **[Git](#git)**
   * [Revert a committed change](#revert-a-committed-change)
   * [Overwrite local branch with remote branch](#overwrite-local-branch-with-remote-branch)
@@ -199,6 +201,25 @@ Example of an Immediately Invoked Function Expression (IIFE, pronounced "iffy"):
 1. https://docs.sqlalchemy.org/en/20/orm/session_transaction.html#session-external-transaction
 2. https://aalvarez.me/posts/setting-up-a-sqlalchemy-and-pytest-based-test-suite/
 3. https://www.core27.co/post/transactional-unit-tests-with-pytest-and-async-sqlalchemy
+
+# PostgreSQL
+
+## URI Format
+```shell
+postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
+```
+
+Examples:
+```shell
+postgresql://
+postgresql://localhost
+postgresql://localhost:5432
+postgresql://localhost/mydb
+postgresql://user@localhost
+postgresql://user:secret@localhost
+postgresql://other@localhost/otherdb?connect_timeout=10&application_name=myapp
+postgresql://localhost/mydb?user=other&password=secret
+```
 
 # Git
 
