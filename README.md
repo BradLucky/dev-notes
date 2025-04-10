@@ -10,6 +10,7 @@
   * [Lambda Cheat Sheet](#lambda-cheat-sheet)
   * [Importance of using printf vs. f-strings when logging](#importance-of-using-printf-vs-f-strings-when-logging)
   * [Atomic SQLA Testing](#atomic-sqla-testing)
+  * [Type Hint Based on Input](#type-hint-based-on-input)
 * **[PostgreSQL](#postgresql)**
   * [URI Format](#uri-format)
 * **[Git](#git)**
@@ -201,6 +202,27 @@ Example of an Immediately Invoked Function Expression (IIFE, pronounced "iffy"):
 1. https://docs.sqlalchemy.org/en/20/orm/session_transaction.html#session-external-transaction
 2. https://aalvarez.me/posts/setting-up-a-sqlalchemy-and-pytest-based-test-suite/
 3. https://www.core27.co/post/transactional-unit-tests-with-pytest-and-async-sqlalchemy
+
+## Type Hint Based on Input
+```python
+from typing import Literal, overload
+
+
+@overload
+def fn(x: int, ret_str: Literal[False]) -> int:
+    ...
+
+
+@overload
+def fn(x: int, ret_str: Literal[True]) -> str:
+    ...
+
+
+def fn(x: int, ret_str: bool) -> int | str:
+    if ret_str:
+        return str(x)
+    return x
+```
 
 # PostgreSQL
 
